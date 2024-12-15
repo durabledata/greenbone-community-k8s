@@ -1,6 +1,8 @@
-# greenbone-community-k8s
+# Greenbone Community K8S
+## Introduction
+Greenbone Community K8S is a Kubernetes deployment of Greenbone Community Edition
 
-A Kubernetes deployment of Greenbone Community Edition
+
 
 Created as a k8s alternative for deploying [Greenbone Community
 Containers](https://greenbone.github.io/docs/latest/22.4/container/index.html)
@@ -9,7 +11,7 @@ Tested with K3s on Rasberry Pi 4 8GB on Ubuntu and Raspian, modify resources as 
 
 ## Basic Deployment
 
-On a Rasberry Pi 4 with Raspian
+On a Raspberry Pi 4 with Raspberry Pi OS (formerly Raspbian)
 
 Disable IPV6
 https://www.howtoraspberry.com/2020/04/disable-ipv6-on-raspberry-pi/
@@ -26,7 +28,7 @@ kubectl apply -f gvm-2204-basic.yaml
 
 - Kilo: https://kilo.squat.ai/docs/introduction
 
-Two k3s nodes used for example, aws (ec2) and edge (rpi4, behind nat with no
+Two k3s nodes used for example, AWS EC2 instance and edge (rpi4, behind nat with no
 port mapping) comments indicate which node each command is run on/for
 
 Bring up ec2 instance with EIP, allow tcp/6443 (k8s) and udp/51820 (kilo)
