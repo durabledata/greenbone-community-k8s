@@ -1,6 +1,6 @@
 # greenbone-community-k8s
 
-A Kubernetes deployment of Greenbone Community Edition
+This repository provides a Kubernetes deployment of the Greenbone Community Edition.
 
 Created as a k8s alternative for deploying [Greenbone Community
 Containers](https://greenbone.github.io/docs/latest/22.4/container/index.html)
@@ -19,7 +19,7 @@ Add add `cgroup_memory=1 cgroup_enable=memory`` to the end of my cat
 
 ```sh
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--flannel-backend=none" sh -
-kubectl apply -f gvm-2204-basic.yaml
+kubectl apply -f [`gvm-2204-basic.yaml`](./gvm-2204-basic.yaml)
 ```
 
 ## Remote Scanner Deployment
@@ -68,6 +68,6 @@ kubectl annotate node [k3s node name of edge node] kilo.squat.ai/persistent-keep
 
 # deploy greenbone
 # update ingress domain name, default example.durabledata.io
-kubectl apply -f gvm-2204-remote-scanner-kilo.yaml
+kubectl apply -f [`gvm-2204-remote-scanner-kilo.yaml`](./gvm-2204-remote-scanner-kilo.yaml)
 # note that greenbone will need to spend some time, over an hour, to pull feeds, populate database, and sync between gvmd and ospd-openvas before functioning properly
 ```
